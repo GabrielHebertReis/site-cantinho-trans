@@ -15,7 +15,7 @@
 
 body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background: linear-gradient(135deg,--rosa-fundo,--branco-fundo);
+    background: linear-gradient(135deg,--rosa-fundo,--branco-fundo,--azul-fundo);
 }
 
 h1, h2, h3{
