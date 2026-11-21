@@ -116,6 +116,45 @@ ul{
     border-top: 5px solid var(--azul-claro);
 }
 
+.cartao-lista{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--branco-fundo);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1.5px solid var(--rosa-escuro)
+}
+
+.container-lista{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: 400px;
+    width: 700px;
+    overflow-y: auto;
+    margin-inline: auto;
+}
+
+.cartao-lista img{
+    width: 130px;
+    flex: 0 0 auto;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.cartao-lista p{
+    margin: 0 0 10px;
+    text-align: left;
+    line-height: 1.4;
+}
+
+.cartao-lista a{
+    display: table;
+    margin: 0 auto;
+    text-align: center;
+}
+
 
 .breadcrumb {
   display: flex;
