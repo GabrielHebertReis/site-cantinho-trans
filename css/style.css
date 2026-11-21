@@ -4,11 +4,29 @@
     --rosa-fundo: #F9DAE0;
     --azul-fundo:#D0EBFA ;
     --azul-escuro:#265769;
-    --fonte: "Trebuchet MS";
+    --branco-fundo: #FFFFFF;
 }
 
 .logo {
     height: 70px;
     width: auto;
     flex-shrink: 0;
+}
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: linear-gradient(135deg,--rosa-fundo,--branco-fundo);
+}
+
+h1, h2, h3{
+    text-transform: uppercase;
+    color: var(--rosa-escuro);
+}
+
+p{
+    color: var(--azul-escuro);
+}
+
+a:hover {
+    color: var(--rosa-escuro);
 }
