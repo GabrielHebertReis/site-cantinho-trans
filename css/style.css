@@ -13,9 +13,10 @@
     flex-shrink: 0;
 }
 
+
 body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background: linear-gradient(120deg,var(--rosa-fundo),var(--branco-fundo),var(--azul-fundo));
+    background: linear-gradient(160deg,var(--rosa-fundo),var(--branco-fundo),var(--azul-fundo));
     min-height: 100vh;
     margin: 50px;
     text-align: center;
@@ -30,8 +31,38 @@ p{
     color: var(--azul-escuro);
 }
 
+a{
+    text-decoration: none;
+}
+
 a:hover {
     color: var(--rosa-escuro);
+}
+
+section + section{
+    margin-top: 48px;
+}
+
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.navegacao a {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--azul-escuro);
+}
+
+.navegacao a:hover {
+    color: var(--rosa-escuro);
+}
+
+.navegacao button{
+    color: var(--branco-fundo);
 }
 
 button{
@@ -61,16 +92,59 @@ ul{
     gap: 20px;
 }
 
-.cartao{
+.cartao-redondo{
     background: var(--branco-fundo);
     flex: 1;
     padding: 20px;
     border-radius: 8px;
+    border-top: 5px solid var(--azul-claro);
+    border-bottom: 5px solid var(--azul-claro);
+}
+
+.cartao-redondo p{
     text-align: start;
 }
+
+.cartao-reto{
+    flex: 1;
+    padding: 20px;
+    border-top: 5px solid var(--azul-claro);
+}
+
 
 .breadcrumb {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.aviso{
+    width: 30px;
+}
+
+.coracao{
+    width: 70px;
+}
+
+.container-titulo-saude {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.titulo-destaque-saude,
+.titulo-saude {
+  flex: 0 0 auto;
+  margin: 0;
+  text-transform: none;
+}
+
+.titulo-destaque-saude{
+    flex: 0 0 auto;
+    display: inline-block;
+    background: var(--rosa-escuro);
+    color: var(--branco-fundo);
+    border-radius: 10px;
+    padding: 5px;
 }
