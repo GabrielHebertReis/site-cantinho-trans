@@ -1,0 +1,14 @@
+:root {
+    --rosa-escuro: #C8356A;
+    --azul-claro: #65CCF1;
+    --rosa-fundo: #F9DAE0;
+    --azul-fundo:#D0EBFA ;
+    --azul-escuro:#265769;
+    --fonte: "Trebuchet MS";
+}
+
+.logo {
+    height: 70px;
+    width: auto;
+    flex-shrink: 0;
+}
