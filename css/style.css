@@ -247,3 +247,351 @@ ul{
     border-radius: 10px;
     padding: 5px;
 }
+
+
+/* ==========================================================
+   PÁGINA: EVENTOS (eventos.html)
+   ========================================================== */
+
+/* ---------- Menu: página atual ---------- */
+.navegacao a[aria-current="page"] {
+    color: var(--rosa-escuro);
+}
+
+/* ---------- Rodapé: bloco de contato (Limeira, e-mail) ---------- */
+.contato-rodape p {
+    margin: 0;
+    text-align: left;
+}
+
+/* ---------- Variantes de botão ---------- */
+.botao-azul {
+    background: var(--azul-claro);
+}
+
+.botao-azul:hover {
+    background: var(--rosa-escuro);
+    color: var(--branco-fundo);
+}
+
+.botao-branco {
+    background: var(--branco-fundo);
+    color: var(--rosa-escuro);
+}
+
+.botao-contorno {
+    background: transparent;
+    border: 2px solid var(--branco-fundo);
+    color: var(--branco-fundo);
+}
+
+.botao-branco:hover,
+.botao-contorno:hover {
+    background: var(--rosa-escuro);
+    color: var(--branco-fundo);
+    border-color: var(--rosa-escuro);
+}
+
+/* ---------- Estrutura da página ---------- */
+.pagina-eventos {
+    width: min(1000px, 90%);
+    margin: 0 auto;
+    padding-top: 40px;
+    text-align: left;
+}
+
+.pagina-eventos section {
+    align-items: stretch;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.intro h1 {
+    margin: 0 0 8px;
+}
+
+.subtitulo {
+    font-size: 1.3rem;
+    margin: 0 auto;
+    max-width: 480px;
+}
+
+.titulo-secao {
+    align-self: flex-start;
+    margin: 0;
+    padding-bottom: 4px;
+    font-size: 1.1rem;
+    text-transform: none;
+    border-bottom: 2px solid var(--rosa-claro);
+}
+
+/* ---------- Próximo encontro / Atividade na cidade ---------- */
+.destaques {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.card-evento {
+    background: var(--branco-fundo);
+    border-radius: 12px;
+    padding: 20px 24px;
+    border-top: 5px solid var(--rosa-escuro);
+    border-bottom: 5px solid var(--rosa-escuro);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.card-evento.azul {
+    border-color: var(--azul-claro);
+}
+
+.card-evento h3 {
+    margin: 0;
+    font-size: 1rem;
+    text-transform: none;
+    color: var(--azul-escuro);
+}
+
+.card-evento p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.card-evento strong {
+    color: var(--rosa-escuro);
+}
+
+.card-evento .descricao {
+    margin: 8px 0 10px;
+}
+
+.etiqueta {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: var(--rosa-escuro);
+}
+
+.azul .etiqueta {
+    color: var(--azul-claro);
+}
+
+/* ---------- Calendário ---------- */
+.calendario-area {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.calendario {
+    background: var(--branco-fundo);
+    border-radius: 12px;
+    padding: 24px;
+    border-top: 5px solid var(--rosa-escuro);
+    border-bottom: 5px solid var(--rosa-escuro);
+}
+
+.calendario-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.calendario-topo strong {
+    color: var(--azul-escuro);
+    text-transform: capitalize;
+}
+
+.btn-mes {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    background: var(--rosa-escuro);
+    color: var(--branco-fundo);
+    font-size: 1.2rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.btn-mes:hover {
+    background: var(--azul-claro);
+}
+
+.dias {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    text-align: center;
+}
+
+.dias .dow {
+    color: var(--rosa-escuro);
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+.dia {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: var(--azul-escuro);
+    font-size: 0.85rem;
+}
+
+.dia.hoje {
+    background: var(--azul-fundo);
+    font-weight: bold;
+}
+
+.dia.evento {
+    background: var(--rosa-claro);
+    font-weight: bold;
+}
+
+.dia.evento.hoje {
+    outline: 2px solid var(--azul-claro);
+}
+
+.legenda {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+    font-size: 0.8rem;
+    color: var(--azul-escuro);
+}
+
+.ponto {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.ponto-hoje { background: var(--azul-fundo); }
+.ponto-evento { background: var(--rosa-claro); }
+
+/* ---------- Lista de eventos ---------- */
+.lista-eventos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item-evento {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--branco-fundo);
+    border-radius: 8px;
+    padding: 14px 16px;
+    border-top: 4px solid var(--rosa-escuro);
+}
+
+.item-evento h3 {
+    margin: 0 0 2px;
+    font-size: 0.95rem;
+    text-transform: none;
+    color: var(--azul-escuro);
+}
+
+.item-evento p {
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+.data-evento {
+    flex: 0 0 auto;
+    width: 54px;
+    height: 54px;
+    border-radius: 8px;
+    background: var(--azul-fundo);
+    color: var(--azul-escuro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.data-evento small { font-size: 0.65rem; }
+.data-evento span { font-size: 1.3rem; line-height: 1; }
+
+/* ---------- Como participar ---------- */
+.participar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card-participar {
+    background: var(--branco-fundo);
+    border-radius: 8px;
+    border-left: 4px solid var(--azul-claro);
+    padding: 12px 16px;
+}
+
+.card-participar h3 {
+    margin: 0 0 4px;
+    font-size: 1rem;
+    text-transform: none;
+}
+
+.card-participar p {
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+/* ---------- Chamada final ---------- */
+.pagina-eventos .chamada {
+    background: var(--rosa-claro);
+    border-radius: 20px;
+    padding: 32px 20px;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.chamada h2 {
+    margin: 0;
+    color: var(--branco-fundo);
+    text-transform: none;
+    font-size: 1.2rem;
+}
+
+.chamada p {
+    margin: 0;
+    color: var(--branco-fundo);
+}
+
+.chamada-botoes {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 800px) {
+    .destaques,
+    .calendario-area,
+    .participar {
+        grid-template-columns: 1fr;
+    }
+
+    .navegacao {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="cabecalho-conteudo">
+            <nav class="navegacao">
+                <a href="index.html">
+                    <img class="logo" src="imgs/logo.png" alt="ovelha com listras azul, rosa e branco">
+                </a>
+                <a href="quem-somos.html">quem somos</a>
+                <a href="eventos.html" aria-current="page">eventos</a>
+                <a href="guias.html">guias e informações</a>
+                <a href="blog.html">blog</a>
+                <a href="apoie.html">apoie</a>
+                <a class="botao" href="participe.html">participe</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pagina-eventos">
+        <div class="intro">
+            <h1>agenda</h1>
+            <p class="subtitulo">Datas e locais dos encontros e das atividades na sua cidade.</p>
+        </div>
+
+        <!-- Próximo encontro e atividade na cidade -->
+        <section class="destaques">
+            <article class="card-evento">
+                <span class="etiqueta">Encontro</span>
+                <h3>Próximo encontro</h3>
+                <p><strong>DATA:</strong> a definir.</p>
+                <p><strong>HORÁRIO:</strong> a definir.</p>
+                <p><strong>LOCAL:</strong> a definir.</p>
+                <p class="descricao">Roda de conversa aberta, com troca de experiências e acolhimento.</p>
+                <a class="botao" href="participe.html">quero participar</a>
+            </article>
+            <article class="card-evento azul">
+                <span class="etiqueta">Na cidade</span>
+                <h3>Atividade na cidade</h3>
+                <p><strong>DATA:</strong> a definir.</p>
+                <p><strong>HORÁRIO:</strong> a definir.</p>
+                <p><strong>LOCAL:</strong> a definir.</p>
+                <p class="descricao">Roda de conversa aberta, com troca de experiências e acolhimento.</p>
+                <a class="botao botao-azul" href="participe.html">quero participar</a>
+            </article>
+        </section>
+
+        <!-- Calendário -->
+        <section>
+            <h2 class="titulo-secao">Calendário</h2>
+            <div class="calendario-area">
+                <div class="calendario">
+                    <div class="calendario-topo">
+                        <button class="btn-mes" id="mes-anterior" aria-label="Mês anterior">&#8249;</button>
+                        <strong id="mes-atual" aria-live="polite"></strong>
+                        <button class="btn-mes" id="mes-proximo" aria-label="Próximo mês">&#8250;</button>
+                    </div>
+                    <div class="dias" id="dias"></div>
+                    <div class="legenda">
+                        <span><i class="ponto ponto-hoje"></i>Hoje</span>
+                        <span><i class="ponto ponto-evento"></i>Evento</span>
+                    </div>
+                </div>
+
+                <div class="lista-eventos" id="lista-eventos">
+                    <article class="item-evento">
+                        <div class="data-evento"><small>—</small><span>00</span></div>
+                        <div>
+                            <h3>Encontro X</h3>
+                            <p>Roda de conversa aberta, com troca de experiências e acolhimento.</p>
+                        </div>
+                    </article>
+                    <article class="item-evento">
+                        <div class="data-evento"><small>—</small><span>00</span></div>
+                        <div>
+                            <h3>Encontro Y</h3>
+                            <p>Roda de conversa aberta, com troca de experiências e acolhimento.</p>
+                        </div>
+                    </article>
+                    <article class="item-evento">
+                        <div class="data-evento"><small>—</small><span>00</span></div>
+                        <div>
+                            <h3>Encontro Z</h3>
+                            <p>Roda de conversa aberta, com troca de experiências e acolhimento.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Como participar -->
+        <section>
+            <h2 class="titulo-secao">Como participar?</h2>
+            <div class="participar">
+                <div class="card-participar">
+                    <h3>Encontros</h3>
+                    <p>Abertos à comunidade trans e a pessoas aliadas, em ambiente seguro e acolhedor.</p>
+                </div>
+                <div class="card-participar">
+                    <h3>Atividades</h3>
+                    <p>Ações pela cidade com debates, trocas de experiência e mobilização.</p>
+                </div>
+                <div class="card-participar">
+                    <h3>Avisos</h3>
+                    <p>Datas e locais são divulgados no grupo do WhatsApp e no Instagram.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chamada final -->
+        <section class="chamada">
+            <h2>Venha construir com a gente</h2>
+            <p>Entre no grupo para receber as datas dos próximos eventos.</p>
+            <div class="chamada-botoes">
+                <a class="botao botao-branco" href="https://chat.whatsapp.com/CuYcqcary4wD2QZe1XbQFm">whatsapp</a>
+                <a class="botao botao-contorno" href="https://www.instagram.com/cantinhotrans/">instagram</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="elemento-rodape">
+            <img class="logo" src="imgs/logo.png" alt="ovelha com listras azul, rosa e branco">
+            <div class="contato-rodape">
+                <p>Limeira, SP</p>
+                <p>email@email.com</p>
+            </div>
+        </div>
+        <div class="elemento-rodape">
+            <a href="https://www.instagram.com/cantinhotrans/"><img class="social" src="imgs/instagram.png" alt="marca do instagram"></a>
+            <a href="https://chat.whatsapp.com/CuYcqcary4wD2QZe1XbQFm"><img class="social" src="imgs/whatsapp.png" alt="marca do whatsapp"></a>
+        </div>
+    </footer>
+
+    <script src="js/eventos.js"></script>
+</body>
+</html>
