@@ -7,6 +7,7 @@
     <link rel="icon" href="imgs/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<<<<<<< HEAD
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/index.css">
@@ -24,10 +25,42 @@
                 <a href="blog.html">blog</a>
                 <a href="apoie.html">apoie</a>
                 <a class="botao" href="participe.html">participe</a>
+=======
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- Ícones (FontAwesome) para o rodapé e botões -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Barra escura no topo extremo -->
+    <div class="top-dark-bar" id="topo"></div>
+
+    <!-- Cabeçalho / Navegação -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#topo" class="logo-box" aria-label="Início do Cantinho Trans">
+                <img src="imgs/logo.png" alt="Logo Cantinho Trans">
+            </a>
+
+            <!-- Botão de menu para telas mobile -->
+            <button class="mobile-menu-btn" aria-label="Menu de navegação" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#quem-somos">QUEM SOMOS</a>
+                <a href="#eventos">EVENTOS</a>
+                <a href="retificacao.html">GUIAS E INFORMAÇÕES</a>
+                <a href="#blog">BLOG</a>
+                <a href="#apoie">APOIE</a>
+                <a href="#participe" class="btn-rosa btn-nav">PARTICIPE</a>
+>>>>>>> efd399d3e2e4979cb2fd95bcab90731efb2d4c93
             </nav>
         </div>
     </header>
 
+<<<<<<< HEAD
     <main class="pagina-inicio">
     <section class="bloco-dividido">
         <div class="coluna-logo">
@@ -58,6 +91,90 @@
             <div class="chamada-botoes">
                 <a class="botao" href="https://www.instagram.com/cantinhotrans/" target="_blank" rel="noopener noreferrer">instagram</a>
                 <a class="botao" href="https://chat.whatsapp.com/CuYcqcary4wD2QZe1XbQFm" target="_blank" rel="noopener noreferrer">whatsapp</a>
+=======
+    <!-- Conteúdo Principal com Gradiente -->
+    <main class="main-gradient">
+        
+        <!-- Seção 1: Hero -->
+        <section class="container split-section hero-section">
+            <div class="col-left logo-hero">
+                <h1 class="curved-title">Cantinho Trans</h1>
+                <img src="imgs/logo.png" alt="Ovelha Cantinho Trans" class="hero-sheep">
+            </div>
+            <div class="col-right text-center">
+                <h2 class="titulo-destaque">UM ESPAÇO DE ACOLHIMENTO,<br>RESISTÊNCIA E COMUNIDADE.</h2>
+                <a href="#saiba-mais" class="btn-rosa">SAIBA MAIS</a>
+            </div>
+        </section>
+
+        <!-- Seção 2: Rede de Apoio -->
+        <section id="quem-somos" class="container split-section">
+            <div class="col-left text-center">
+                <h2 class="titulo-destaque">UMA REDE DE APOIO<br>NO INTERIOR DE SP</h2>
+                <a href="#quem-somos-detalhes" class="btn-rosa">QUEM SOMOS</a>
+            </div>
+            <div class="col-right">
+                <img src="imgs/foto-coletivo.png" alt="Foto do Coletivo Cantinho Trans" class="card-image">
+            </div>
+        </section>
+
+        <!-- Seção 3: Comunidade e Redes -->
+        <section class="container split-section">
+            <div class="col-left text-center">
+                <p class="texto-corrido">
+                    Nosso coletivo é feito de pessoas reais e histórias compartilhadas em Limeira e região. 
+                    Entre no nosso grupo do WhatsApp para trocar experiências, tirar dúvidas ou siga nosso 
+                    Instagram para acompanhar o dia a dia do projeto.
+                </p>
+                <div class="btn-group">
+                    <a href="https://www.instagram.com/cantinhotrans/" target="_blank" rel="noopener noreferrer" class="btn-rosa">
+                        <i class="fa-brands fa-instagram"></i> INSTAGRAM
+                    </a>
+                    <a href="https://chat.whatsapp.com/CuYcqcary4wD2QZe1XbQFm?mode=gi_t&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAacOjX7VcDt8Z_sxssZVdL1s0wTwXOiULzS03C44QOteIYPoT-UdqO2l7CtOdA_aem_ZmFrZWR1bW15MTZieXRlcw" target="_blank" rel="noopener noreferrer" class="btn-rosa">
+                        <i class="fa-brands fa-whatsapp"></i> WHATSAPP
+                    </a>
+                </div>
+            </div>
+            <div class="col-right text-center">
+                <h2 class="titulo-destaque">VENHA CONSTRUIR<br>COM A GENTE</h2>
+            </div>
+        </section>
+
+        <!-- Seção 4: Eventos -->
+        <section id="eventos" class="container split-section">
+            <div class="col-left text-center">
+                <h2 class="titulo-destaque">PARTICIPE DOS<br>PRÓXIMOS EVENTOS</h2>
+                <a href="#eventos-lista" class="btn-rosa">PARTICIPAR</a>
+            </div>
+            <div class="col-right">
+                <img src="imgs/banner.png" alt="Banner TranSarau" class="card-image square-card">
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Linha divisória antes do rodapé -->
+    <div class="trans-divider"></div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <img src="imgs/logo.png" alt="Logo Cantinho Trans" class="footer-logo">
+                <div class="footer-info">
+                    <p><i class="fa-solid fa-location-dot"></i> Limeira, SP</p>
+                    <p><i class="fa-regular fa-envelope"></i> ocantinhotrans@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <a href="https://chat.whatsapp.com/CuYcqcary4wD2QZe1XbQFm?mode=gi_t&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAacOjX7VcDt8Z_sxssZVdL1s0wTwXOiULzS03C44QOteIYPoT-UdqO2l7CtOdA_aem_ZmFrZWR1bW15MTZieXRlcw" target="_blank" rel="noopener noreferrer" class="social-icon whatsapp" aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="https://www.instagram.com/cantinhotrans/" target="_blank" rel="noopener noreferrer" class="social-icon instagram" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+>>>>>>> efd399d3e2e4979cb2fd95bcab90731efb2d4c93
             </div>
         </div>
         <div class="coluna-texto">
@@ -87,5 +204,12 @@
             <a href="https://chat.whatsapp.com/CuYcqcary4wD2QZe1XbQFm" target="_blank" rel="noopener noreferrer"><img class="social" src="imgs/whatsapp.png" alt="WhatsApp do Cantinho Trans"></a>
         </div>
     </footer>
+<<<<<<< HEAD
+=======
+
+    <!-- Script JavaScript para controle dos links internos e menu -->
+    <script src="js/script.js"></script>
+
+>>>>>>> efd399d3e2e4979cb2fd95bcab90731efb2d4c93
 </body>
 </html>
