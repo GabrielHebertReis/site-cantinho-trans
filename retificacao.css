@@ -1,0 +1,226 @@
+/* =========================================
+   ESTILOS DA PÁGINA INTERNA: RETIFICAÇÃO
+   ========================================= */
+
+.nav-socials {
+    display: flex;
+    gap: 8px;
+    margin-left: 10px;
+}
+
+.mini-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 0.95rem;
+}
+
+.active-link {
+    color: var(--rosa-destaque) !important;
+    font-weight: 700 !important;
+}
+
+.content-wrapper {
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--rosa-destaque);
+    margin-bottom: 20px;
+}
+
+.breadcrumb a {
+    color: var(--rosa-destaque);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* Cabeçalho da Página */
+.page-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.titulo-pagina {
+    color: var(--rosa-destaque);
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.intro-text {
+    text-align: left;
+    font-size: 0.95rem;
+    color: #2c3e50;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Subtítulos com destaque (Pill/Badge) */
+.subtitulo-destaque {
+    text-align: center;
+    color: var(--rosa-destaque);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+
+.subtitulo-central {
+    text-align: center;
+    color: var(--rosa-destaque);
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+.badge-rosa {
+    background-color: var(--rosa-destaque);
+    color: #ffffff;
+    padding: 3px 14px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+/* Grid de Cards (Via Administrativa vs Judicial) */
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 65px;
+}
+
+.via-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 35px 28px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+    text-align: center;
+    position: relative;
+}
+
+/* Bordas superiores e inferiores coloridas nos cards */
+.card-rosa {
+    border-top: 5px solid var(--rosa-destaque);
+    border-bottom: 5px solid var(--rosa-destaque);
+}
+
+.card-azul {
+    border-top: 5px solid var(--azul-trans);
+    border-bottom: 5px solid var(--azul-trans);
+}
+
+.card-icon {
+    font-size: 2.4rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.via-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.via-card p {
+    text-align: left;
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 14px;
+    line-height: 1.55;
+}
+
+/* Seção de Documentos */
+.documentos-section {
+    margin-bottom: 60px;
+}
+
+.docs-columns {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+
+.doc-title-rosa {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #2c3e50;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    border-bottom: 3px solid var(--rosa-destaque);
+    display: inline-block;
+    min-width: 240px;
+}
+
+.doc-title-azul {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #2c3e50;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    border-bottom: 3px solid var(--azul-trans);
+    display: inline-block;
+    min-width: 260px;
+}
+
+.doc-list {
+    padding-left: 20px;
+    font-size: 0.9rem;
+    color: #2c3e50;
+}
+
+.doc-list li {
+    margin-bottom: 8px;
+    line-height: 1.45;
+}
+
+.doc-p {
+    font-size: 0.9rem;
+    color: #2c3e50;
+    margin-bottom: 14px;
+    line-height: 1.5;
+}
+
+/* Fontes no final da página */
+.fontes-box {
+    font-size: 0.72rem;
+    color: #444;
+    margin-top: 40px;
+}
+
+.fontes-box p {
+    margin-bottom: 4px;
+}
+
+.fontes-box ul {
+    padding-left: 16px;
+}
+
+.fontes-box li {
+    margin-bottom: 2px;
+}
+
+/* Responsividade Mobile para a página interna */
+@media (max-width: 768px) {
+    .titulo-pagina {
+        font-size: 2rem;
+    }
+
+    .cards-grid,
+    .docs-columns {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
