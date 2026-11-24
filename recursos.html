@@ -3,29 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recursos</title>
+    <title>Recursos | Cantinho Trans</title>
+    <link rel="icon" href="imgs/logo.png">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<header>
-    <div class="cabecalho-conteudo">
-        <nav class="navegacao">
-            <a href="index.html">
-                <img class = logo src="imgs/logo.png" alt="ovelha com listras azul, rosa e branco">
-            </a>
-            <a href="quem-somos.html">quem somos</a>
-            <a href="blog.html">blog</a>
-            <a href="apoie.html">apoie</a>
-            <a class="botao" href="participe.html">participe</a>
-        </nav>
-    </div>
-</header>
 <body>
+    <header>
+        <div class="cabecalho-conteudo">
+            <nav class="navegacao">
+                <a href="index.html">
+                    <img class="logo" src="imgs/logo.png" alt="ovelha com listras azul, rosa e branco">
+                </a>
+                <a href="quem-somos.html">quem somos</a>
+                <a href="eventos.html">eventos</a>
+                <a href="guias.html" aria-current="page">guias e informações</a>
+                <a href="blog.html">blog</a>
+                <a href="apoie.html">apoie</a>
+                <a class="botao" href="participe.html">participe</a>
+            </nav>
+        </div>
+    </header>
+
     <main>
-        <nav class="breadcrumb">
-            <a href="index.html">Início</a>
-            <p>> Guias > </p>
-            <a href="recursos.html">Recursos</a>
-        </nav>
+        <nav class="breadcrumb" aria-label="Caminho de navegação">
+    <a href="index.html">Início</a>
+    <span aria-hidden="true">&gt;</span>
+    <a href="guias.html">Guias</a>
+    <span aria-hidden="true">&gt;</span>
+    <span>Recursos</span>
+    </nav>
         <h1>recursos</h1>
         <div class="container-lista">
             <div class="cartao-lista">
@@ -79,7 +85,7 @@
                 </div>
                 <div>
                     <p>DIVERSIFICADEV:
-Oferecemos cursos gratuitos em uma rede segura, com apoio emocional e acolhimento para pessoas trans, travestis, não-bináries e outras identidades sub-representadas.</p>
+    Oferecemos cursos gratuitos em uma rede segura, com apoio emocional e acolhimento para pessoas trans, travestis, não-bináries e outras identidades sub-representadas.</p>
                     <a class="botao" href="https://diversifica.dev/">acesse aqui</a>
                 </div>
             </div>
@@ -111,14 +117,19 @@ Oferecemos cursos gratuitos em uma rede segura, com apoio emocional e acolhiment
                 </div>
             </div>
     </main>
+
+    <footer>
+        <div class="elemento-rodape">
+            <img class="logo" src="imgs/logo.png" alt="ovelha com listras azul, rosa e branco">
+            <div class="contato-rodape">
+                <p>Limeira, SP</p>
+                <p>ocantinhotrans@gmail.com</p>
+            </div>
+        </div>
+        <div class="elemento-rodape">
+            <a href="https://www.instagram.com/cantinhotrans/" target="_blank" rel="noopener noreferrer"><img class="social" src="imgs/instagram.png" alt="Instagram do Cantinho Trans"></a>
+            <a href="https://chat.whatsapp.com/CuYcqcary4wD2QZe1XbQFm" target="_blank" rel="noopener noreferrer"><img class="social" src="imgs/whatsapp.png" alt="WhatsApp do Cantinho Trans"></a>
+        </div>
+    </footer>
 </body>
-<footer>
-    <div class="elemento-rodape">
-        <img class = logo src="imgs/logo.png" alt="ovelha com listras azul, rosa e branco">
-        <p>email@email.com</p>
-    </div>
-    <div class="elemento-rodape">
-        <a href="https://www.instagram.com/cantinhotrans/"><img class = social src="imgs/instagram.png" alt="marca do instagram"></a>
-        <a href="https://l.instagram.com/?u=https%3A%2F%2Fchat.whatsapp.com%2FCuYcqcary4wD2QZe1XbQFm%3Fmode%3Dgi_t%26utm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAafUM6Kb_hfI3GpSJvwKGAon6IhVgdKncADQmHkkzFZ2V45iGBwWbbtCoXw19w_aem_iNTuTZfYdKugGwPlQZglpA&e=AUCg2KX9hMz73aWXbOHQvkngitAx23NJaY23C-wXv7vj5NgvLKjV5IG2u9CWQtM1GLsVpsHq2x0MAuzkjI-Tylka9reaZH46pFgGRhgQn8hdHarAgOx3PRAvtgzSnRHGqd_DlOvei_XYr-wUG-U6pT8"><img class = social src="imgs/whatsapp.png" alt="marca do whatsapp"></a>
-    </div>
-</footer>
+</html>

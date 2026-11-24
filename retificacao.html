@@ -3,59 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retificação - Guias e Informações | Cantinho Trans</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Retificação | Cantinho Trans</title>
+    <link rel="icon" href="imgs/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/retificacao.css">
 </head>
 <body>
-
-    <div class="top-dark-bar"></div>
-
-    <!-- Cabeçalho / Navegação -->
-    <header class="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="logo-box">
-                <img src="logo-ovelha.png" alt="Logo Cantinho Trans">
-            </a>
-
-            <nav class="nav-links">
-                <a href="quem-somos.html" class="pagina-futura">QUEM SOMOS</a>
-                <a href="eventos.html" class="pagina-futura">EVENTOS</a>
-                <a href="retificacao.html" class="active-link">GUIAS E INFORMAÇÕES</a>
-                <a href="blog.html" class="pagina-futura">BLOG</a>
-                <a href="apoie.html" class="pagina-futura">APOIE</a>
-                <a href="participe.html" class="btn-rosa btn-nav pagina-futura">PARTICIPE</a>
-                
-                <!-- Ícones sociais no cabeçalho conforme o layout da página interna -->
-                <div class="nav-socials">
-                    <a href="https://www.instagram.com/cantinhotrans/" target="_blank" rel="noopener noreferrer" class="social-icon instagram mini-icon" aria-label="Instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://chat.whatsapp.com/CuYcqcary4wD2QZe1XbQFm?mode=gi_t&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAacOjX7VcDt8Z_sxssZVdL1s0wTwXOiULzS03C44QOteIYPoT-UdqO2l7CtOdA_aem_ZmFrZWR1bW15MTZieXRlcw" target="_blank" rel="noopener noreferrer" class="social-icon whatsapp mini-icon" aria-label="WhatsApp">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
-                </div>
+    <header>
+        <div class="cabecalho-conteudo">
+            <nav class="navegacao">
+                <a href="index.html">
+                    <img class="logo" src="imgs/logo.png" alt="ovelha com listras azul, rosa e branco">
+                </a>
+                <a href="quem-somos.html">quem somos</a>
+                <a href="eventos.html">eventos</a>
+                <a href="guias.html" aria-current="page">guias e informações</a>
+                <a href="blog.html">blog</a>
+                <a href="apoie.html">apoie</a>
+                <a class="botao" href="participe.html">participe</a>
             </nav>
         </div>
-        <div class="trans-divider"></div>
     </header>
 
-    <!-- Conteúdo Principal -->
-    <main class="main-gradient page-retificacao">
-        <div class="container content-wrapper">
+    <main class="pagina-retificacao">
+    <nav class="breadcrumb" aria-label="Caminho de navegação">
+    <a href="index.html">Início</a>
+    <span aria-hidden="true">&gt;</span>
+    <a href="guias.html">Guias</a>
+    <span aria-hidden="true">&gt;</span>
+    <span>Retificação</span>
+    </nav>
             
-            <!-- Breadcrumb (Caminho de navegação) -->
-            <nav class="breadcrumb" aria-label="Breadcrumb">
-                <a href="index.html">Início</a> &gt; 
-                <a href="#" class="pagina-futura">Guias</a> &gt; 
-                <span>Retificação</span>
-            </nav>
-
-            <!-- Título Principal e Introdução -->
-            <header class="page-header">
+            <div class="page-header">
                 <h1 class="titulo-pagina">RETIFICAÇÃO</h1>
                 
                 <div class="intro-text">
@@ -66,20 +45,20 @@
                         Diferente do nome social (que apenas acompanha o nome de registro), essa retificação modifica <strong>definitivamente</strong> a Certidão de Nascimento ou de Casamento, passando a valer para todos os fins legais.
                     </p>
                 </div>
-            </header>
+            </div>
 
-            <!-- Subtítulo com destaque rosa -->
+            
             <section class="vias-section">
                 <h2 class="subtitulo-destaque">
                     Como realizar o <span class="badge-rosa">pedido de retificação</span> em Limeira
                 </h2>
 
-                <!-- Cards das duas vias -->
+               
                 <div class="cards-grid">
-                    <!-- Card Esquerdo: Via Administrativa -->
+                    
                     <article class="via-card card-rosa">
-                        <div class="card-icon">
-                            <i class="fa-regular fa-file-lines"></i>
+                        <div class="card-icon" aria-hidden="true">
+                            📄
                         </div>
                         <h3>Via Administrativa<br>(Cartório)</h3>
                         <p>
@@ -87,10 +66,10 @@
                         </p>
                     </article>
 
-                    <!-- Card Direito: Via Judicial Gratuita -->
+                 
                     <article class="via-card card-azul">
-                        <div class="card-icon">
-                            <i class="fa-solid fa-gavel"></i>
+                        <div class="card-icon" aria-hidden="true">
+                            ⚖️
                         </div>
                         <h3>Via Judicial Gratuita<br>(Defensoria Pública)</h3>
                         <p>
@@ -103,7 +82,7 @@
                 </div>
             </section>
 
-            <!-- Seção Documentos Necessários -->
+          
             <section class="documentos-section">
                 <h2 class="subtitulo-central">
                     <span class="badge-rosa">Documentos necessários</span><br>
@@ -111,7 +90,7 @@
                 </h2>
 
                 <div class="docs-columns">
-                    <!-- Coluna 1: Documentos Pessoais -->
+                    
                     <div class="doc-block">
                         <h3 class="doc-title-rosa">Documentos Pessoais</h3>
                         <ul class="doc-list">
@@ -124,7 +103,7 @@
                         </ul>
                     </div>
 
-                    <!-- Coluna 2: Certidões Pagas -->
+                    
                     <div class="doc-block">
                         <h3 class="doc-title-rosa">Certidões Pagas</h3>
                         <p class="doc-p">
@@ -136,7 +115,7 @@
                     </div>
                 </div>
 
-                <!-- Bloco Inferior: Certidões Gratuitas -->
+                
                 <div class="doc-block full-width-doc">
                     <h3 class="doc-title-azul">Certidões Gratuitas (Online)</h3>
                     <ul class="doc-list">
@@ -150,7 +129,7 @@
                 </div>
             </section>
 
-            <!-- Rodapé de Fontes -->
+            
             <aside class="fontes-box">
                 <p><strong>Fontes:</strong></p>
                 <ul>
@@ -160,40 +139,21 @@
                 </ul>
             </aside>
 
-        </div>
+        
     </main>
 
-    <div class="trans-divider"></div>
-
-    <!-- Rodapé -->
-    <footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-left">
-                <img src="logo-ovelha.png" alt="Logo Cantinho Trans" class="footer-logo">
-                <div class="footer-info">
-                    <p><i class="fa-solid fa-location-dot"></i> Limeira, SP</p>
-                    <p><i class="fa-regular fa-envelope"></i> ocantinhotrans@gmail.com</p>
-                </div>
-            </div>
-
-            <div class="footer-right">
-                <a href="https://chat.whatsapp.com/CuYcqcary4wD2QZe1XbQFm?mode=gi_t&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAacOjX7VcDt8Z_sxssZVdL1s0wTwXOiULzS03C44QOteIYPoT-UdqO2l7CtOdA_aem_ZmFrZWR1bW15MTZieXRlcw" target="_blank" rel="noopener noreferrer" class="social-icon whatsapp" aria-label="WhatsApp">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
-                <a href="https://www.instagram.com/cantinhotrans/" target="_blank" rel="noopener noreferrer" class="social-icon instagram" aria-label="Instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
+    <footer>
+        <div class="elemento-rodape">
+            <img class="logo" src="imgs/logo.png" alt="ovelha com listras azul, rosa e branco">
+            <div class="contato-rodape">
+                <p>Limeira, SP</p>
+                <p>ocantinhotrans@gmail.com</p>
             </div>
         </div>
+        <div class="elemento-rodape">
+            <a href="https://www.instagram.com/cantinhotrans/" target="_blank" rel="noopener noreferrer"><img class="social" src="imgs/instagram.png" alt="Instagram do Cantinho Trans"></a>
+            <a href="https://chat.whatsapp.com/CuYcqcary4wD2QZe1XbQFm" target="_blank" rel="noopener noreferrer"><img class="social" src="imgs/whatsapp.png" alt="WhatsApp do Cantinho Trans"></a>
+        </div>
     </footer>
-
-    <script>
-        document.querySelectorAll('.pagina-futura').forEach(link => {
-            link.addEventListener('click', function(event) {
-                event.preventDefault();
-            });
-        });
-    </script>
-
 </body>
 </html>

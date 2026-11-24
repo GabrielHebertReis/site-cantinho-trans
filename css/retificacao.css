@@ -1,0 +1,186 @@
+/* ==========================================================
+   PÁGINA: RETIFICAÇÃO (retificacao.html)
+   ========================================================== */
+
+.pagina-retificacao {
+    width: min(820px, 90%);
+    margin: 0 auto;
+    padding-top: 10px;
+    text-align: left;
+}
+
+.pagina-retificacao section {
+    align-items: stretch;
+}
+
+.pagina-retificacao .breadcrumb {
+    margin: 0 0 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* ---------- Cabeçalho da página ---------- */
+.page-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.titulo-pagina {
+    margin: 0 0 25px;
+    font-size: 2.8rem;
+    letter-spacing: 1px;
+}
+
+.intro-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.intro-text p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ---------- Subtítulos com destaque ---------- */
+.subtitulo-destaque,
+.subtitulo-central {
+    margin: 0 0 35px;
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    text-transform: none;
+}
+
+.badge-rosa {
+    display: inline-block;
+    padding: 3px 14px;
+    border-radius: 6px;
+    background: var(--rosa-escuro);
+    color: var(--branco-fundo);
+}
+
+/* ---------- Cards das duas vias ---------- */
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 65px;
+}
+
+.via-card {
+    background: var(--branco-fundo);
+    border-radius: 12px;
+    padding: 35px 28px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+    text-align: center;
+}
+
+.card-rosa {
+    border-top: 5px solid var(--rosa-escuro);
+    border-bottom: 5px solid var(--rosa-escuro);
+}
+
+.card-azul {
+    border-top: 5px solid var(--azul-claro);
+    border-bottom: 5px solid var(--azul-claro);
+}
+
+.card-icon {
+    margin-bottom: 15px;
+    font-size: 2.4rem;
+}
+
+.via-card h3 {
+    margin: 0 0 20px;
+    font-size: 1rem;
+    line-height: 1.4;
+    text-transform: none;
+    color: var(--azul-escuro);
+}
+
+.via-card p {
+    margin: 0 0 14px;
+    text-align: left;
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+/* ---------- Documentos necessários ---------- */
+.documentos-section {
+    margin-bottom: 60px;
+}
+
+.docs-columns {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+
+.doc-title-rosa,
+.doc-title-azul {
+    display: inline-block;
+    min-width: 240px;
+    margin: 0 0 16px;
+    padding-bottom: 8px;
+    font-size: 1rem;
+    text-transform: none;
+    color: var(--azul-escuro);
+}
+
+.doc-title-rosa { border-bottom: 3px solid var(--rosa-escuro); }
+.doc-title-azul { border-bottom: 3px solid var(--azul-claro); }
+
+.pagina-retificacao .doc-list {
+    list-style: disc;
+    margin: 0;
+    padding-left: 20px;
+    font-size: 0.9rem;
+}
+
+.doc-list li {
+    margin-bottom: 8px;
+    line-height: 1.45;
+}
+
+.doc-p {
+    margin: 0 0 14px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* ---------- Fontes ---------- */
+.fontes-box {
+    margin-top: 40px;
+    font-size: 0.75rem;
+}
+
+.fontes-box p {
+    margin: 0 0 4px;
+}
+
+.pagina-retificacao .fontes-box ul {
+    list-style: disc;
+    margin: 0;
+    padding-left: 16px;
+}
+
+.fontes-box li {
+    margin-bottom: 2px;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 768px) {
+    .titulo-pagina {
+        font-size: 2rem;
+    }
+
+    .cards-grid,
+    .docs-columns {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
