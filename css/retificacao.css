@@ -1,12 +1,12 @@
-<<<<<<< HEAD
 /* ==========================================================
    PÁGINA: RETIFICAÇÃO (retificacao.html)
    ========================================================== */
 
 .pagina-retificacao {
-    width: min(820px, 90%);
+    width: min(960px, 90%);
     margin: 0 auto;
-    padding-top: 10px;
+    padding: 0 20px;
+    box-sizing: border-box;
     text-align: left;
 }
 
@@ -14,69 +14,20 @@
     align-items: stretch;
 }
 
-.pagina-retificacao .breadcrumb {
-    margin: 0 0 20px;
-    font-size: 0.85rem;
-    font-weight: bold;
-}
-
 /* ---------- Cabeçalho da página ---------- */
-=======
-/* =========================================
-   ESTILOS DA PÁGINA INTERNA: RETIFICAÇÃO
-   ========================================= */
-
-.nav-socials {
-    display: flex;
-    gap: 8px;
-    margin-left: 10px;
-}
-
-.mini-icon {
-    width: 28px;
-    height: 28px;
-    font-size: 0.95rem;
-}
-
-.active-link {
-    color: var(--rosa-destaque) !important;
-    font-weight: 700 !important;
-}
-
-.content-wrapper {
-    max-width: 820px;
-    margin: 0 auto;
-}
-
-/* Breadcrumb */
-.breadcrumb {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--rosa-destaque);
-    margin-bottom: 20px;
-}
-
-.breadcrumb a {
-    color: var(--rosa-destaque);
-    text-decoration: none;
-}
-
-.breadcrumb a:hover {
-    text-decoration: underline;
-}
-
-/* Cabeçalho da Página */
->>>>>>> efd399d3e2e4979cb2fd95bcab90731efb2d4c93
 .page-header {
     text-align: center;
     margin-bottom: 45px;
 }
 
 .titulo-pagina {
-<<<<<<< HEAD
     margin: 0 0 25px;
-    font-size: 2.8rem;
+    font-size: 2.4rem;
+    font-weight: bold;
     letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--rosa-escuro);
 }
 
 .intro-text {
@@ -85,6 +36,7 @@
     gap: 16px;
     text-align: left;
     font-size: 0.95rem;
+    color: var(--azul-escuro);
 }
 
 .intro-text p {
@@ -98,65 +50,21 @@
     margin: 0 0 35px;
     text-align: center;
     font-size: 1.25rem;
-    line-height: 1.5;
+    font-weight: bold;
+    line-height: 1.6;
     text-transform: none;
+    color: var(--rosa-escuro);
 }
 
 .badge-rosa {
     display: inline-block;
-    padding: 3px 14px;
-    border-radius: 6px;
+    padding: 5px 12px;
+    border-radius: 10px;
     background: var(--rosa-escuro);
     color: var(--branco-fundo);
 }
 
 /* ---------- Cards das duas vias ---------- */
-=======
-    color: var(--rosa-destaque);
-    font-size: 2.8rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-    margin-bottom: 25px;
-    text-transform: uppercase;
-}
-
-.intro-text {
-    text-align: left;
-    font-size: 0.95rem;
-    color: #2c3e50;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-/* Subtítulos com destaque (Pill/Badge) */
-.subtitulo-destaque {
-    text-align: center;
-    color: var(--rosa-destaque);
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 35px;
-}
-
-.subtitulo-central {
-    text-align: center;
-    color: var(--rosa-destaque);
-    font-size: 1.25rem;
-    font-weight: 700;
-    line-height: 1.5;
-    margin-bottom: 40px;
-}
-
-.badge-rosa {
-    background-color: var(--rosa-destaque);
-    color: #ffffff;
-    padding: 3px 14px;
-    border-radius: 6px;
-    display: inline-block;
-}
-
-/* Grid de Cards (Via Administrativa vs Judicial) */
->>>>>>> efd399d3e2e4979cb2fd95bcab90731efb2d4c93
 .cards-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -165,23 +73,16 @@
 }
 
 .via-card {
-<<<<<<< HEAD
     background: var(--branco-fundo);
-=======
-    background-color: #ffffff;
->>>>>>> efd399d3e2e4979cb2fd95bcab90731efb2d4c93
-    border-radius: 12px;
+    border-radius: 8px;
     padding: 35px 28px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+    border-top: 5px solid var(--azul-claro);
+    border-bottom: 5px solid var(--azul-claro);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
     text-align: center;
-<<<<<<< HEAD
 }
 
-.card-rosa {
-    border-top: 5px solid var(--rosa-escuro);
-    border-bottom: 5px solid var(--rosa-escuro);
-}
-
+.card-rosa,
 .card-azul {
     border-top: 5px solid var(--azul-claro);
     border-bottom: 5px solid var(--azul-claro);
@@ -190,63 +91,31 @@
 .card-icon {
     margin-bottom: 15px;
     font-size: 2.4rem;
+    color: var(--azul-escuro);
 }
 
 .via-card h3 {
     margin: 0 0 20px;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
     line-height: 1.4;
     text-transform: none;
-    color: var(--azul-escuro);
+    color: var(--rosa-escuro);
 }
 
 .via-card p {
     margin: 0 0 14px;
     text-align: left;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     line-height: 1.55;
+    color: var(--azul-escuro);
+}
+
+.via-card p:last-child {
+    margin-bottom: 0;
 }
 
 /* ---------- Documentos necessários ---------- */
-=======
-    position: relative;
-}
-
-/* Bordas superiores e inferiores coloridas nos cards */
-.card-rosa {
-    border-top: 5px solid var(--rosa-destaque);
-    border-bottom: 5px solid var(--rosa-destaque);
-}
-
-.card-azul {
-    border-top: 5px solid var(--azul-trans);
-    border-bottom: 5px solid var(--azul-trans);
-}
-
-.card-icon {
-    font-size: 2.4rem;
-    color: #2c3e50;
-    margin-bottom: 15px;
-}
-
-.via-card h3 {
-    font-size: 1rem;
-    font-weight: 700;
-    color: #2c3e50;
-    margin-bottom: 20px;
-    line-height: 1.4;
-}
-
-.via-card p {
-    text-align: left;
-    font-size: 0.9rem;
-    color: #333;
-    margin-bottom: 14px;
-    line-height: 1.55;
-}
-
-/* Seção de Documentos */
->>>>>>> efd399d3e2e4979cb2fd95bcab90731efb2d4c93
 .documentos-section {
     margin-bottom: 60px;
 }
@@ -258,54 +127,32 @@
     margin-bottom: 40px;
 }
 
-<<<<<<< HEAD
 .doc-title-rosa,
 .doc-title-azul {
     display: inline-block;
-    min-width: 240px;
+    min-width: min(240px, 100%);
     margin: 0 0 16px;
     padding-bottom: 8px;
     font-size: 1rem;
+    font-weight: bold;
     text-transform: none;
-    color: var(--azul-escuro);
+    color: var(--rosa-escuro);
 }
 
-.doc-title-rosa { border-bottom: 3px solid var(--rosa-escuro); }
-.doc-title-azul { border-bottom: 3px solid var(--azul-claro); }
+.doc-title-rosa {
+    border-bottom: 3px solid var(--rosa-escuro);
+}
+
+.doc-title-azul {
+    border-bottom: 3px solid var(--azul-claro);
+}
 
 .pagina-retificacao .doc-list {
     list-style: disc;
     margin: 0;
     padding-left: 20px;
     font-size: 0.9rem;
-=======
-.doc-title-rosa {
-    font-size: 1rem;
-    font-weight: 700;
-    color: #2c3e50;
-    padding-bottom: 8px;
-    margin-bottom: 16px;
-    border-bottom: 3px solid var(--rosa-destaque);
-    display: inline-block;
-    min-width: 240px;
-}
-
-.doc-title-azul {
-    font-size: 1rem;
-    font-weight: 700;
-    color: #2c3e50;
-    padding-bottom: 8px;
-    margin-bottom: 16px;
-    border-bottom: 3px solid var(--azul-trans);
-    display: inline-block;
-    min-width: 260px;
-}
-
-.doc-list {
-    padding-left: 20px;
-    font-size: 0.9rem;
-    color: #2c3e50;
->>>>>>> efd399d3e2e4979cb2fd95bcab90731efb2d4c93
+    color: var(--azul-escuro);
 }
 
 .doc-list li {
@@ -314,57 +161,34 @@
 }
 
 .doc-p {
-<<<<<<< HEAD
     margin: 0 0 14px;
     font-size: 0.9rem;
     line-height: 1.5;
+    color: var(--azul-escuro);
 }
 
 /* ---------- Fontes ---------- */
 .fontes-box {
     margin-top: 40px;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
+    color: var(--azul-escuro);
 }
 
 .fontes-box p {
-    margin: 0 0 4px;
+    margin: 0 0 6px;
 }
 
 .pagina-retificacao .fontes-box ul {
     list-style: disc;
     margin: 0;
-=======
-    font-size: 0.9rem;
-    color: #2c3e50;
-    margin-bottom: 14px;
-    line-height: 1.5;
-}
-
-/* Fontes no final da página */
-.fontes-box {
-    font-size: 0.72rem;
-    color: #444;
-    margin-top: 40px;
-}
-
-.fontes-box p {
-    margin-bottom: 4px;
-}
-
-.fontes-box ul {
->>>>>>> efd399d3e2e4979cb2fd95bcab90731efb2d4c93
-    padding-left: 16px;
+    padding-left: 18px;
 }
 
 .fontes-box li {
-    margin-bottom: 2px;
+    margin-bottom: 4px;
 }
 
-<<<<<<< HEAD
 /* ---------- Responsivo ---------- */
-=======
-/* Responsividade Mobile para a página interna */
->>>>>>> efd399d3e2e4979cb2fd95bcab90731efb2d4c93
 @media (max-width: 768px) {
     .titulo-pagina {
         font-size: 2rem;
@@ -375,8 +199,9 @@
         grid-template-columns: 1fr;
         gap: 25px;
     }
-<<<<<<< HEAD
+
+    .navegacao {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
-=======
-}
->>>>>>> efd399d3e2e4979cb2fd95bcab90731efb2d4c93
