@@ -853,3 +853,574 @@ main {
 .breadcrumb a:hover {
     text-decoration: underline;
 }
+
+/* ==========================================================
+   PÁGINA BLOG
+   ========================================================== */
+
+/* texto só para leitores de tela (usado no rótulo da busca) */
+.so-leitor {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+/* ---------- Estrutura da página ---------- */
+.pagina-blog {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    padding-top: 40px;
+    text-align: left;
+}
+
+.pagina-blog h1 {
+    margin: 0 0 24px;
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+/* o section global usa align-items: center; aqui precisa esticar */
+.pagina-blog section {
+    align-items: stretch;
+}
+
+.pagina-blog :focus-visible {
+    outline: 3px solid var(--rosa-escuro);
+    outline-offset: 3px;
+}
+
+/* ---------- Carrossel (CSS puro) ---------- */
+.carrossel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carrossel::-webkit-scrollbar {
+    display: none;
+}
+
+.slide {
+    position: relative;
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    aspect-ratio: 3 / 1;
+    min-height: 200px;
+    background: #d9d9d9; /* troque por background-image quando tiver a foto */
+}
+
+.slide-link,
+.slide-link:hover {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 0 72px;
+    text-align: center;
+    color: var(--branco-fundo);
+    font-weight: bold;
+    font-size: clamp(1.8rem, 6vw, 4rem);
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.seta {
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    z-index: 2;
+    width: 56px;
+    height: 56px;
+    display: grid;
+    place-items: center;
+}
+
+.seta::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border: solid var(--branco-fundo);
+    border-width: 0 0 5px 5px;
+}
+
+.seta-esq { left: 8px; }
+.seta-esq::before { rotate: 45deg; }
+.seta-dir { right: 8px; }
+.seta-dir::before { rotate: -135deg; }
+.seta:hover::before { border-color: var(--rosa-escuro); }
+
+/* ---------- Últimas publicações ---------- */
+.ultimas {
+    margin-top: 48px;
+    gap: 20px;
+}
+
+.ultimas-topo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.ultimas h2 {
+    margin: 0;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-weight: normal;
+}
+
+/* lupa: <details> abre a caixa de busca sem JS */
+.busca summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 6px;
+}
+
+.busca summary::-webkit-details-marker {
+    display: none;
+}
+
+.lupa {
+    position: relative;
+    display: block;
+    width: 28px;
+    height: 28px;
+}
+
+.lupa::before {
+    content: "";
+    position: absolute;
+    inset: 0 6px 6px 0;
+    border: 3px solid var(--rosa-escuro);
+    border-radius: 50%;
+}
+
+.lupa::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 3px;
+    width: 11px;
+    height: 3px;
+    background: var(--rosa-escuro);
+    border-radius: 2px;
+    rotate: 45deg;
+}
+
+.busca form {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 5;
+    display: flex;
+    gap: 8px;
+    padding: 12px;
+    background: var(--branco-fundo);
+    border: 1.5px solid var(--rosa-escuro);
+    border-radius: 12px;
+}
+
+.busca input {
+    font: inherit;
+    padding: 8px 14px;
+    color: var(--azul-escuro);
+    border: 1.5px solid var(--azul-escuro);
+    border-radius: 50px;
+}
+
+/* ---------- Cartão do post ---------- */
+.post {
+    position: relative;
+    display: grid;
+    grid-template-columns: clamp(110px, 22%, 240px) 1fr;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 20px;
+    background: var(--branco-fundo);
+    border: 1.5px solid var(--rosa-escuro);
+    border-radius: 12px;
+}
+
+.post:hover,
+.post:focus-within {
+    border-color: var(--azul-claro);
+}
+
+.foto {
+    aspect-ratio: 4 / 3;
+    display: grid;
+    place-items: center;
+    background: #d9d9d9;
+    color: var(--branco-fundo);
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-weight: bold;
+}
+
+.post h3 {
+    margin: 0 0 6px;
+    font-size: 1.1rem;
+    color: var(--azul-escuro);
+}
+
+.post:hover h3,
+.post:focus-within h3 {
+    color: var(--rosa-escuro);
+}
+
+.post h3 a {
+    color: inherit;
+}
+
+/* o cartão inteiro vira clicável */
+.post h3 a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+/* resumo cortado em 2 linhas com "…" */
+.post p {
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 800px) {
+    .slide {
+        aspect-ratio: 2 / 1;
+    }
+
+    .post {
+        grid-template-columns: 100px 1fr;
+        gap: 14px;
+        padding: 12px;
+    }
+}
+
+/* ==========================================================
+   PONTOS DO CARROSSEL E PÁGINAS DE POST
+   ========================================================== */
+.carrossel-pontos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.carrossel-ponto {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    border: 2px solid var(--rosa-escuro);
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+}
+
+.carrossel-ponto[aria-current="true"] {
+    background: var(--rosa-escuro);
+}
+
+.sem-resultado {
+    text-align: center;
+    font-weight: bold;
+}
+
+.pagina-post {
+    width: min(860px, 90%);
+    margin: 0 auto;
+    padding-top: 32px;
+    text-align: left;
+}
+
+.pagina-post .breadcrumb {
+    margin: 0 0 20px;
+    flex-wrap: wrap;
+}
+
+.post-completo {
+    background: var(--branco-fundo);
+    border: 1.5px solid var(--rosa-escuro);
+    border-radius: 12px;
+    padding: 28px;
+}
+
+.foto-post {
+    width: 100%;
+    aspect-ratio: 16 / 7;
+    display: grid;
+    place-items: center;
+    background: #d9d9d9;
+    color: var(--branco-fundo);
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    font-weight: bold;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.post-completo h1 {
+    margin: 0 0 8px;
+    text-align: left;
+    text-transform: none;
+    font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+}
+
+.meta-post {
+    margin: 0 0 20px;
+    font-size: 0.9rem;
+}
+
+.conteudo-post {
+    line-height: 1.65;
+}
+
+.conteudo-post h2 {
+    margin: 24px 0 8px;
+    text-transform: none;
+    font-size: 1.2rem;
+}
+
+.conteudo-post ul,
+.conteudo-post ol {
+    padding-left: 22px;
+    margin: 8px 0 16px;
+}
+
+.conteudo-post ul {
+    list-style: disc;
+}
+
+.conteudo-post ol {
+    list-style: decimal;
+}
+
+.conteudo-post li + li {
+    margin-top: 6px;
+}
+
+.conteudo-post a {
+    color: var(--rosa-escuro);
+    text-decoration: underline;
+}
+
+.aviso-post {
+    margin-top: 24px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    background: var(--rosa-fundo);
+    font-size: 0.9rem;
+}
+
+.voltar-post {
+    margin-top: 24px;
+}
+
+@media (max-width: 800px) {
+    .post-completo {
+        padding: 18px;
+    }
+}
+
+.foto {
+    overflow: hidden;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.foto-post {
+    width: 100%;
+    aspect-ratio: 16 / 7;
+    overflow: hidden;
+    background: #d9d9d9;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.foto-post img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.slide {
+    overflow: hidden;
+}
+/* ==========================================================
+   CARROSSEL DIVIDIDO
+   ========================================================== */
+.carrossel {
+    border-radius: 16px;
+    border: 1.5px solid var(--rosa-escuro);
+    background: var(--branco-fundo);
+}
+
+.slide {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    aspect-ratio: auto;
+    min-height: 310px;
+    background: var(--branco-fundo);
+    overflow: hidden;
+}
+
+.slide-imagem {
+    position: relative;
+    background: #d9d9d9;
+    overflow: hidden;
+}
+
+.slide-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Degradê suave na borda direita da foto para integrar com o cartão */
+.slide-imagem::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, transparent 70%, var(--branco-fundo) 100%);
+    pointer-events: none;
+}
+
+.slide-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 220px;
+    display: grid;
+    place-items: center;
+    color: var(--branco-fundo);
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    font-weight: bold;
+}
+
+.slide-selo {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 2;
+    padding: 6px 14px;
+    border-radius: 50px;
+    background: var(--rosa-escuro);
+    color: var(--branco-fundo);
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.slide-texto {
+    padding: 32px 54px 28px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+    text-align: left;
+}
+
+.slide-texto h2 {
+    margin: 0;
+    text-transform: none;
+    font-size: clamp(1.3rem, 2.4vw, 1.8rem);
+    line-height: 1.25;
+}
+
+.slide-texto h2 a {
+    color: var(--azul-escuro);
+}
+
+.slide-texto h2 a:hover {
+    color: var(--rosa-escuro);
+}
+
+.slide-texto p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--azul-escuro);
+}
+
+.slide-rodape {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.slide-data {
+    font-size: 0.82rem;
+    color: var(--azul-escuro);
+    opacity: 0.8;
+}
+
+.slide-leia {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: var(--rosa-escuro);
+    text-transform: uppercase;
+}
+
+.slide-leia:hover {
+    color: var(--azul-claro);
+}
+
+/* Ajuste das setas para aparecerem bem sobre fundo claro e foto */
+.slide .seta {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.slide .seta::before {
+    width: 11px;
+    height: 11px;
+    border-color: var(--rosa-escuro);
+    border-width: 0 0 3px 3px;
+}
+
+.slide .seta:hover {
+    background: var(--rosa-escuro);
+}
+
+.slide .seta:hover::before {
+    border-color: var(--branco-fundo);
+}
+
+@media (max-width: 800px) {
+    .slide {
+        grid-template-columns: 1fr;
+    }
+
+    .slide-imagem {
+        aspect-ratio: 16 / 9;
+    }
+
+    .slide-imagem::after {
+        background: linear-gradient(to bottom, transparent 70%, var(--branco-fundo) 100%);
+    }
+
+    .slide-texto {
+        padding: 20px 24px 24px;
+    }
+}

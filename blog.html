@@ -6,6 +6,7 @@
     <title>Blog | Cantinho Trans</title>
     <link rel="icon" href="imgs/logo.png">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/blog.js" defer></script>
 </head>
 <body>
     <header>
@@ -24,14 +25,104 @@
         </div>
     </header>
 
-    <main class="pagina-simples">
-    <div class="intro">
+    <main class="pagina-blog">
         <h1>blog</h1>
-        <p class="subtitulo">Em breve: textos de conscientização, relatos e novidades do coletivo.</p>
-    </div>
-    <div class="chamada-botoes">
-            <a class="botao" href="index.html">voltar ao início</a>
-    </div>
+
+        <div class="carrossel" role="region" aria-roledescription="carrossel" aria-label="Posts em destaque" tabindex="0">
+            <div class="slide" id="destaque-1">
+                <div class="slide-imagem">
+                    <span class="slide-selo">EM DESTAQUE</span>
+                    <img src="imgs/escrita.png" alt="Mão escrevendo com caneta-tinteiro sobre documento">
+                </div>
+                <div class="slide-texto">
+                    <h2><a href="post-retificacao-de-nome.html">Retificação de nome e gênero em cartório: passo a passo</a></h2>
+                    <p>Você pode mudar nome e gênero no documento direto no cartório, sem advogado, sem laudo e sem cirurgia. Veja quem pode pedir, quais documentos reunir e como funciona cada etapa.</p>
+                    <div class="slide-rodape">
+                        <span class="slide-data">26 de novembro de 2026</span>
+                        <a class="slide-leia" href="post-retificacao-de-nome.html">+ LEIA MAIS</a>
+                    </div>
+                </div>
+                <a class="seta seta-esq" href="#destaque-3" aria-label="Post anterior"></a>
+                <a class="seta seta-dir" href="#destaque-2" aria-label="Próximo post"></a>
+            </div>
+
+            <div class="slide" id="destaque-2">
+                <div class="slide-imagem">
+                    <span class="slide-selo">EM DESTAQUE</span>
+                    <img src="imgs/lei.png" alt="Martelo de madeira batendo sobre livros">
+                </div>
+                <div class="slide-texto">
+                    <h2><a href="post-seus-direitos.html">Seus direitos: nome social, retificação e como denunciar a transfobia</a></h2>
+                    <p>Nome social, retificação, atendimento sem discriminação e o que fazer em caso de transfobia: conheça o que a lei garante e os canais gratuitos para denunciar.</p>
+                    <div class="slide-rodape">
+                        <span class="slide-data">26 de novembro de 2026</span>
+                        <a class="slide-leia" href="post-seus-direitos.html">+ LEIA MAIS</a>
+                    </div>
+                </div>
+                <a class="seta seta-esq" href="#destaque-1" aria-label="Post anterior"></a>
+                <a class="seta seta-dir" href="#destaque-3" aria-label="Próximo post"></a>
+            </div>
+
+            <div class="slide" id="destaque-3">
+                <div class="slide-imagem">
+                    <span class="slide-selo">EM DESTAQUE</span>
+                    <img src="imgs/saude.png" alt="Pessoa de jaleco de doutor conversando com outra pessoa ao lado">
+                </div>
+                <div class="slide-texto">
+                    <h2><a href="post-hormonizacao.html">Como começar a hormonização com segurança</a></h2>
+                    <p>Por onde começar o acompanhamento de saúde pelo SUS, quais serviços atendem na região de Campinas e Limeira e o que mudou nas regras recentes.</p>
+                    <div class="slide-rodape">
+                        <span class="slide-data">26 de novembro de 2026</span>
+                        <a class="slide-leia" href="post-hormonizacao.html">+ LEIA MAIS</a>
+                    </div>
+                </div>
+                <a class="seta seta-esq" href="#destaque-2" aria-label="Post anterior"></a>
+                <a class="seta seta-dir" href="#destaque-1" aria-label="Próximo post"></a>
+            </div>
+        </div>
+
+        <section class="ultimas" aria-labelledby="ultimas-titulo">
+            <div class="ultimas-topo">
+                <h2 id="ultimas-titulo">Últimas publicações:</h2>
+                <details class="busca">
+                    <summary aria-label="Pesquisar no blog"><span class="lupa" aria-hidden="true"></span></summary>
+                    <form role="search" action="blog.html" method="get">
+                        <label class="so-leitor" for="busca-blog">Pesquisar no blog</label>
+                        <input id="busca-blog" type="search" name="q" placeholder="Procurar no blog…">
+                        <button class="botao" type="submit">buscar</button>
+                    </form>
+                </details>
+            </div>
+
+            <article class="post">
+                <div class="foto-post">
+                    <img src="imgs/escrita.png" alt="Mão escrevendo em papéis">
+                </div>
+                <div>
+                    <h3><a href="post-retificacao-de-nome.html">Retificação de nome e gênero em cartório: passo a passo</a></h3>
+                    <p>Você pode mudar nome e gênero no documento direto no cartório, sem advogado, sem laudo e sem cirurgia. Veja o passo a passo.</p>
+                </div>
+            </article>
+            <article class="post">
+                <div class="foto-post">
+                    <img src="imgs/lei.png" alt="Martelo de madeira batendo sobre livros">
+                </div>
+                <div>
+                    <h3><a href="post-seus-direitos.html">Seus direitos: nome social, retificação e como denunciar a transfobia</a></h3>
+                    <p>Nome social, retificação, atendimento sem discriminação e o que fazer em caso de transfobia: o que a lei garante e como denunciar.</p>
+                </div>
+            </article>
+            <article class="post">
+                <div class="foto-post">
+                    <img src="imgs/saude.png" alt="Pessoa de jaleco de doutor conversando com outra pessoa ao lado">
+                </div>
+                <div>
+                    <h3><a href="post-hormonizacao.html">Como começar a hormonização com segurança</a></h3>
+                    <p>Por onde começar com acompanhamento de saúde: o caminho pelo SUS, o que mudou nas regras e como se cuidar.</p>
+                </div>
+            </article>
+            <p class="sem-resultado" id="sem-resultado" hidden>Nenhum post encontrado para essa busca.</p>
+        </section>
     </main>
 
     <footer>
