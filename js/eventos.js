@@ -1,6 +1,6 @@
 // Para adicionar eventos, preencha a const EVENTOS com por ex:
 // { data: "2026-12-05", titulo: "Encontro mensal", descricao: "Praça tal, 15h" }
-const EVENTOS = [];
+const EVENTOS = [{ data: "2026-12-05", titulo: "CERVEJADA 🍻🍻", descricao: "Nossa cervejada anual ocorrerá no estúdio Mirage Eventos, com início às 15h!" }];
 
 const MESES = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho",
                "agosto", "setembro", "outubro", "novembro", "dezembro"];

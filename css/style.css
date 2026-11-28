@@ -1424,3 +1424,552 @@ main {
         padding: 20px 24px 24px;
     }
 }
+
+/* ==========================================================
+   PÁGINAS: APOIE (apoie.html) e PARTICIPE (participe.html)
+   ========================================================== */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+.titulo-centro {
+    align-self: center;
+    text-align: center;
+}
+
+.pagina-simples section.intro-apoio {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+    gap: 16px;
+}
+
+.pagina-simples .intro-apoio h1 {
+    margin: 0;
+    font-size: 2.6rem;
+}
+
+.subtitulo-largo {
+    max-width: 760px;
+    line-height: 1.5;
+}
+
+/* ---------- Apoie: foto + texto ---------- */
+.apoio-destaque {
+    display: grid;
+    grid-template-columns: minmax(0, 380px) 1fr;
+    gap: 48px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 48px;
+}
+
+.foto-apoio {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 4px solid var(--branco-fundo);
+    box-shadow: 0 8px 24px rgba(38, 87, 105, 0.15);
+}
+
+.texto-apoio p {
+    margin-top: 0;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.lista-apoio {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.lista-apoio li {
+    border-left: 3px solid var(--rosa-claro);
+    padding-left: 14px;
+    font-size: 1.15rem;
+    line-height: 1.45;
+    color: var(--azul-escuro);
+}
+
+.lista-apoio strong {
+    color: var(--rosa-escuro);
+}
+
+/* ---------- Apoie: botões grandes ---------- */
+.botoes-empilhados {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 60px;
+}
+
+.botao-grande {
+    width: min(420px, 100%);
+    box-sizing: border-box;
+    padding: 18px 24px;
+    font-size: 16px;
+    font-family: inherit;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.botao-contorno-rosa {
+    background: var(--branco-fundo);
+    color: var(--rosa-escuro);
+    border: 2px solid var(--rosa-escuro);
+}
+
+.botao-contorno-rosa:hover {
+    background: var(--rosa-escuro);
+    color: var(--branco-fundo);
+}
+
+/* ---------- Apoie: pop-up "Quero ajudar diretamente" ---------- */
+.modal-ajuda {
+    width: min(480px, 92vw);
+    padding: 0;
+    border: none;
+    border-radius: 20px;
+    background: var(--branco-fundo);
+    color: var(--azul-escuro);
+    font-family: inherit;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(38, 87, 105, 0.35);
+}
+
+.modal-ajuda[open] {
+    animation: modal-entrada 0.2s ease-out;
+}
+
+.modal-ajuda::backdrop {
+    background: rgba(38, 87, 105, 0.45);
+    backdrop-filter: blur(2px);
+}
+
+@keyframes modal-entrada {
+    from { opacity: 0; transform: translateY(12px) scale(0.98); }
+    to   { opacity: 1; transform: none; }
+}
+
+.modal-topo {
+    position: relative;
+    padding: 22px 56px 18px;
+    border-bottom: 5px solid transparent;
+    border-image: linear-gradient(
+        to right,
+        var(--azul-claro) 0 20%,
+        var(--rosa-claro) 20% 40%,
+        #fff 40% 60%,
+        var(--rosa-claro) 60% 80%,
+        var(--azul-claro) 80%
+    ) 1;
+}
+
+.modal-topo h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.modal-fechar {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 50%;
+    background: var(--azul-fundo);
+    color: var(--azul-escuro);
+    font-size: 1.4rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.modal-fechar:hover {
+    background: var(--rosa-claro);
+    color: var(--branco-fundo);
+}
+
+.modal-corpo {
+    padding: 24px 26px 28px;
+}
+
+.modal-painel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.modal-painel[hidden] {
+    display: none;
+}
+
+.modal-texto {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.modal-nota {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.modal-voltar {
+    align-self: flex-start;
+    border: none;
+    background: none;
+    padding: 0;
+    font: inherit;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: var(--rosa-escuro);
+    cursor: pointer;
+}
+
+.modal-voltar:hover {
+    text-decoration: underline;
+}
+
+.opcoes-ajuda {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    width: 100%;
+}
+
+.opcao-ajuda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 20px 12px;
+    border: 2px solid var(--rosa-claro);
+    border-radius: 14px;
+    background: var(--branco-fundo);
+    font: inherit;
+    color: var(--azul-escuro);
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.opcao-ajuda.opcao-azul {
+    border-color: var(--azul-claro);
+}
+
+.opcao-ajuda:hover,
+.opcao-ajuda:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(200, 53, 106, 0.18);
+    border-color: var(--rosa-escuro);
+}
+
+.opcao-ajuda.opcao-azul:hover,
+.opcao-ajuda.opcao-azul:focus-visible {
+    box-shadow: 0 8px 18px rgba(101, 204, 241, 0.35);
+    border-color: var(--azul-claro);
+}
+
+.opcao-emoji {
+    font-size: 2rem;
+}
+
+.opcao-titulo {
+    font-weight: bold;
+    color: var(--rosa-escuro);
+}
+
+.opcao-azul .opcao-titulo {
+    color: var(--azul-escuro);
+}
+
+.opcao-desc {
+    font-size: 0.8rem;
+    line-height: 1.3;
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.chip input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.chip span {
+    display: inline-block;
+    padding: 8px 14px;
+    border: 1.5px solid var(--rosa-claro);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: var(--rosa-escuro);
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.chip input:checked + span {
+    background: var(--rosa-escuro);
+    border-color: var(--rosa-escuro);
+    color: var(--branco-fundo);
+}
+
+.chip input:focus-visible + span {
+    outline: 2px solid var(--azul-claro);
+    outline-offset: 2px;
+}
+
+.caixa-pix {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 18px 12px;
+    border: 2px dashed var(--azul-claro);
+    border-radius: 14px;
+    background: var(--azul-fundo);
+    word-break: break-all;
+}
+
+.caixa-pix strong {
+    font-size: 1.15rem;
+    color: var(--rosa-escuro);
+}
+
+.botao-modal {
+    padding: 14px 32px;
+    font-family: inherit;
+}
+
+/* ---------- Participe ---------- */
+.hero-participe {
+    position: relative;
+}
+
+.ovelha-hero {
+    width: 120px;
+    height: auto;
+    animation: flutuar 3.5s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50%      { transform: translateY(-10px) rotate(2deg); }
+}
+
+.titulo-comunidade {
+    font-size: 2.2rem !important;
+}
+
+.faixa-trans {
+    display: flex;
+    width: min(320px, 70%);
+    height: 8px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 6px;
+}
+
+.faixa-trans span {
+    flex: 1;
+}
+
+.faixa-trans span:nth-child(1),
+.faixa-trans span:nth-child(5) { background: var(--azul-claro); }
+.faixa-trans span:nth-child(2),
+.faixa-trans span:nth-child(4) { background: var(--rosa-claro); }
+.faixa-trans span:nth-child(3) { background: var(--branco-fundo); }
+
+.pagina-simples section.cartoes-redes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: stretch;
+    margin-bottom: 60px;
+}
+
+.cartao-rede {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding: 32px 24px;
+    background: var(--branco-fundo);
+    border-radius: 16px;
+    border-top: 5px solid var(--azul-claro);
+    border-bottom: 5px solid var(--azul-claro);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cartao-instagram {
+    border-color: var(--rosa-escuro);
+}
+
+.cartao-rede:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(38, 87, 105, 0.18);
+}
+
+.cartao-rede h2 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.cartao-whatsapp h2 {
+    color: var(--azul-escuro);
+}
+
+.cartao-rede p {
+    margin: 0;
+    line-height: 1.5;
+    flex: 1;
+}
+
+.rede-icone {
+    width: 110px;
+    height: 110px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--branco-fundo);
+    transition: transform 0.3s ease;
+}
+
+.rede-icone svg {
+    width: 70%;
+    height: 70%;
+}
+
+.icone-instagram { background: #EE6A94; }
+.icone-whatsapp { background: #4BA3C7; }
+
+.cartao-rede:hover .rede-icone {
+    transform: rotate(-6deg) scale(1.06);
+}
+
+/* Passos */
+.pagina-simples section.passos {
+    margin-bottom: 60px;
+}
+
+.lista-passos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    text-align: center;
+}
+
+.lista-passos li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.lista-passos h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    text-transform: none;
+    color: var(--azul-escuro);
+}
+
+.lista-passos p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.lista-passos a {
+    color: var(--rosa-escuro);
+    font-weight: bold;
+}
+
+.lista-passos a:hover {
+    text-decoration: underline;
+}
+
+.numero-passo {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--rosa-escuro);
+    color: var(--branco-fundo);
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.numero-passo.azul {
+    background: var(--azul-claro);
+}
+
+/* Faixa final */
+.pagina-simples section.faixa-final {
+    background: var(--rosa-claro);
+    border-radius: 20px;
+    padding: 36px 20px;
+    gap: 10px;
+    text-align: center;
+}
+
+.faixa-final h2 {
+    margin: 0;
+    color: var(--branco-fundo);
+    text-transform: none;
+    font-size: 1.5rem;
+}
+
+.faixa-final p {
+    margin: 0;
+    color: var(--branco-fundo);
+    max-width: 520px;
+    line-height: 1.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ovelha-hero { animation: none; }
+    .modal-ajuda[open] { animation: none; }
+    .cartao-rede,
+    .rede-icone,
+    .opcao-ajuda { transition: none; }
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 800px) {
+    .apoio-destaque,
+    .opcoes-ajuda,
+    .lista-passos {
+        grid-template-columns: 1fr;
+    }
+
+    .pagina-simples section.cartoes-redes {
+        grid-template-columns: 1fr;
+    }
+
+    .foto-apoio {
+        max-width: 380px;
+        margin: 0 auto;
+    }
+}

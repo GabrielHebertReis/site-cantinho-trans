@@ -25,14 +25,80 @@
     </header>
 
     <main class="pagina-simples">
-    <div class="intro">
-        <h1>apoie</h1>
-        <p class="subtitulo">Em breve você poderá apoiar o Cantinho Trans por aqui. Enquanto isso, acompanhe o coletivo nas redes.</p>
+    <section class="intro intro-apoio">
+        <h1>como apoiar:</h1>
+        <p class="subtitulo subtitulo-largo">O Cantinho está de portas abertas para receber ajuda financeira e também não-financeira. Seja com trabalho voluntário, materiais, recursos, iniciativas culturais ou uma contribuição via Pix, toda ajuda faz o coletivo crescer!</p>
+    </section>
+
+    <section class="apoio-destaque">
+        <img class="foto-apoio" src="imgs/produtos.jpg" alt="Chaveiros do Cantinho Trans com a ovelha nas cores da bandeira trans e pompons azuis e rosas">
+        <div class="texto-apoio">
+            <p>Esta página mostra como você pode ajudar o Cantinho a crescer e também como entrar em contato para isso.</p>
+            <ul class="lista-apoio">
+                <li><strong>Trabalho voluntário:</strong> ajude na organização de encontros e atividades.</li>
+                <li><strong>Materiais e recursos:</strong> contribua com o que o coletivo precisa para funcionar.</li>
+                <li><strong>Iniciativas culturais:</strong> traga ideias, oficinas e eventos para a comunidade.</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="chamada-botoes botoes-empilhados">
+        <a class="botao botao-grande" href="participe.html">faça parte do cantinho!</a>
+        <button type="button" class="botao botao-azul botao-grande" id="abrir-ajuda" aria-haspopup="dialog">quero ajudar diretamente!</button>
+        <a class="botao botao-contorno-rosa botao-grande" href="https://wa.me/5519987595140?text=Oi%2C%20Rita!%20Vim%20pelo%20site%20do%20Cantinho%20Trans%20e%20quero%20conhecer%20a%20lojinha." target="_blank" rel="noopener noreferrer">visite a lojinha</a>
     </div>
-    <div class="chamada-botoes">
-            <a class="botao" href="https://chat.whatsapp.com/CuYcqcary4wD2QZe1XbQFm" target="_blank" rel="noopener noreferrer">whatsapp</a>
-            <a class="botao botao-azul" href="https://www.instagram.com/cantinhotrans/" target="_blank" rel="noopener noreferrer">instagram</a>
-    </div>
+
+    <dialog class="modal-ajuda" id="modal-ajuda" aria-labelledby="titulo-modal">
+        <div class="modal-topo">
+            <h2 id="titulo-modal">Como você quer ajudar?</h2>
+            <button type="button" class="modal-fechar" data-fechar aria-label="Fechar">&times;</button>
+        </div>
+
+        <div class="modal-corpo">
+            <!-- Passo 1: escolha -->
+            <div class="modal-painel" id="painel-escolha">
+                <p class="modal-texto">Escolha o caminho que combina com você:</p>
+                <div class="opcoes-ajuda">
+                    <button type="button" class="opcao-ajuda" data-abrir="painel-extra">
+                        <span class="opcao-emoji" aria-hidden="true">🤝</span>
+                        <span class="opcao-titulo">Ajuda não-financeira</span>
+                        <span class="opcao-desc">Voluntariado, materiais, recursos e iniciativas culturais</span>
+                    </button>
+                    <button type="button" class="opcao-ajuda opcao-azul" data-abrir="painel-pix">
+                        <span class="opcao-emoji" aria-hidden="true">💙</span>
+                        <span class="opcao-titulo">Contribuir via Pix</span>
+                        <span class="opcao-desc">Uma ajuda financeira, de qualquer valor</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Passo 2a: ajuda não-financeira -->
+            <div class="modal-painel" id="painel-extra" hidden>
+                <button type="button" class="modal-voltar" data-abrir="painel-escolha">&larr; voltar</button>
+                <p class="modal-texto">Marque como você gostaria de ajudar e escreva para o e-mail do Cantinho:</p>
+                <div class="chips" id="chips-ajuda">
+                    <label class="chip"><input type="checkbox" value="Trabalho voluntário"><span>Trabalho voluntário</span></label>
+                    <label class="chip"><input type="checkbox" value="Materiais"><span>Materiais</span></label>
+                    <label class="chip"><input type="checkbox" value="Recursos"><span>Recursos</span></label>
+                    <label class="chip"><input type="checkbox" value="Iniciativas culturais"><span>Iniciativas culturais</span></label>
+                    <label class="chip"><input type="checkbox" value="Outra forma de ajudar"><span>Outra forma</span></label>
+                </div>
+                <a class="botao botao-modal" id="enviar-ajuda" href="mailto:ocantinhotrans@gmail.com?subject=Quero%20ajudar%20o%20Cantinho%20Trans">escrever e-mail</a>
+                <p class="modal-nota">ocantinhotrans@gmail.com</p>
+            </div>
+
+            <!-- Passo 2b: pix -->
+            <div class="modal-painel" id="painel-pix" hidden>
+                <button type="button" class="modal-voltar" data-abrir="painel-escolha">&larr; voltar</button>
+                <p class="modal-texto">Chave Pix (e-mail):</p>
+                <div class="caixa-pix">
+                    <strong id="chave-pix">ritas.frati@gmail.com</strong>
+                </div>
+                <button type="button" class="botao botao-azul botao-modal" id="copiar-pix">copiar chave pix</button>
+                <p class="modal-nota">Obrigado por ajudar o Cantinho a crescer! 💗</p>
+            </div>
+        </div>
+    </dialog>
     </main>
 
     <footer>
@@ -48,5 +114,7 @@
             <a href="https://chat.whatsapp.com/CuYcqcary4wD2QZe1XbQFm" target="_blank" rel="noopener noreferrer"><img class="social" src="imgs/whatsapp.png" alt="WhatsApp do Cantinho Trans"></a>
         </div>
     </footer>
+
+    <script src="js/contato.js"></script>
 </body>
 </html>
